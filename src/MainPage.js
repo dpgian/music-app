@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react'
 import './MainPage.css'
 import { Link } from '@reach/router'
 
+import { API_KEY } from './options'
+
 const MainPage = () => {
     const [artist, setArtist] = useState([])
-    const API_KEY = 'BQB1khW3IALqLB2fUSJ413AqF4Crrcub6Y9p6mHaAQsLfKxSaqCbNsov8saApXSeMA2R79Q3RW3MIvWe4l0N37vbmJtC2UD_vOXiAzbW6eoTOFZaaol_k4R1dMcj5FP9jeQdp5u4D1qiJNYg3q1fyPHDDd6xkr_lSQ'
-    
+
     const renderArtist = artist ? artist.map(x => 
         <Link to={`Artist/${x.id}`} state={{artistName: x.name, artistImages: x.images}} key={x.id} className='list-group-item list-group-item-action'>
             <img alt='' src={`${x.images[0].url}`} className='img-fluid thumbnail'/>

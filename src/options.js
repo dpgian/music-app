@@ -1,0 +1,3 @@
+const API_KEY = 'BQAtu9ZRICAYRWTH3iVhtyHKLAxxktUHbwB9jXiFe08o27c3P5ibFKXXLYuDfxFqHulBjA_MsavRzJ2v6Pc0M0wV75dn0qoD868Dsz3tRf4Wd2GGXhyBMkbzJ6KFhRdP4RQEn-g-tRxgwstVh69cnEDmdSw5_3hPGA'
+
+//https://developer.spotify.com/console/get-several-albums/

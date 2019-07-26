@@ -12,13 +12,13 @@ const App = () => {
         <div className='app'>
             <nav className='navbar navbar-light bg-light sticky-top'>
                 <Link to='/'>
-                    <i class="material-icons">music_note</i>
+                    <i className="material-icons">music_note</i>
                 </Link>
                 <h2 className='title'> Music App </h2>
             </nav>
 
-            <React.Suspense fallback={<div class="spinner-border m-5" role="status">
-  <span class="sr-only">Loading...</span>
+            <React.Suspense fallback={<div className="spinner-border m-5" role="status">
+  <span className="sr-only">Loading...</span>
 </div>}>
                 <Router>
                     <MainPage path='/' />

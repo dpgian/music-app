@@ -1,30 +1,29 @@
 import React, {useState, useEffect} from 'react'
-import { Link } from '@reach/router'
 import './ArtistPage.css'
+import { API_KEY } from './options';
 
 const ArtistPage = ({location, artistId}) => {
     let artistImages = location.state.artistImages;
     let artistName = location.state.artistName;
     
-    const API_KEY = 'BQB1khW3IALqLB2fUSJ413AqF4Crrcub6Y9p6mHaAQsLfKxSaqCbNsov8saApXSeMA2R79Q3RW3MIvWe4l0N37vbmJtC2UD_vOXiAzbW6eoTOFZaaol_k4R1dMcj5FP9jeQdp5u4D1qiJNYg3q1fyPHDDd6xkr_lSQ'
     const country = 'GB'
     const [songs, setSongs] = useState([]);
     const [albums, setAlbums] = useState([]);
 
     const renderSongs = songs ? 
         songs.map(x => 
-        <Link to={x.uri} state={{}} key={x.external_ids.isrc} className='list-group-item list-group-item-action'>
+        <a href={x.external_urls.spotify} key={x.external_ids.isrc} className='list-group-item list-group-item-action'>
             {x.name}
-        </Link>
-        ) : <div class="spinner-border m-5" role="status">
-        <span class="sr-only">Loading...</span>
+        </a>
+        ) : <div className="spinner-border m-5" role="status">
+        <span className="sr-only">Loading...</span>
       </div>
 
     const renderAlbums = albums ? albums.map(x => 
-            <div className='card'>
+            <a className='card' key={x.id} href={x.external_urls.spotify}>
                 <img src={x.images[0].url} className='card-img' alt=''></img>
                 <p>{x.name}</p>
-            </div>
+            </a>
        
         ) : <div className='list-group-item list-group-item-action'>
         Loading...
@@ -61,7 +60,6 @@ const ArtistPage = ({location, artistId}) => {
     },[]);
     setAlbums(result)
     }
-
 
     return (
         <div className='artistPage'>

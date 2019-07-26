@@ -1,0 +1,11 @@
+.thumbnail {
+    height: 20vh;
+    border-radius: 10vh;
+    margin-right: 10vh;
+}
+
+.list-group-item-action {
+    text-align: center;
+    margin-bottom: 1vh;
+    font-size: larger;
+}

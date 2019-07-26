@@ -1,0 +1,35 @@
+.artistPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-thumbnail {
+    height: 20vh;
+    width: 20vh;
+    border-radius: 10vh;
+}
+
+.album-pic {
+    height: 20vh;
+    width: 20vh;
+    border-radius: 3vh;
+}
+
+.album-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 30vh;
+    margin: .1rem;
+}
+
+.section {
+    margin: 1rem;
+}

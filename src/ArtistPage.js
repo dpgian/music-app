@@ -30,6 +30,7 @@ const ArtistPage = ({location, artistId}) => {
     </div>
 
     useEffect(() => {
+
         fetch(`https://api.spotify.com/v1/artists/${artistId}/top-tracks?country=${country}`, {
             method: 'GET',
             headers: new Headers({
@@ -47,6 +48,7 @@ const ArtistPage = ({location, artistId}) => {
                 "Authorization" : `Bearer ${API_KEY}`
             })
         }).then(response => response.json()).then(result => reduceAlbums(result.items))
+    
     }, [])
 
     let reduceAlbums = (arr) => { 
@@ -62,6 +64,7 @@ const ArtistPage = ({location, artistId}) => {
     }
 
     return (
+        
         <div className='artistPage'>
 
             <h2 className='section'>{artistName}</h2>

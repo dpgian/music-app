@@ -27,6 +27,7 @@ const App = () => {
                 </Router>        
             </React.Suspense>
             
+            <p>NOTE: The App needs an API token to fetch data. A fix is to implement an Authorization Flow but this has not been done yet.  </p>
         </div>
     )
 }
